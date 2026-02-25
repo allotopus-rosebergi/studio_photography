@@ -37,14 +37,15 @@ function GalleryItem({ photo }: GalleryItemProps): JSX.Element {
         <div
             className="project
         p-0.5 mb-6 sm:mb-14 w-full
-        bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-700 hover:bg-gradient-to-br hover:from-zinc-800 hover:via-zinc-600 hover:to-zinc-500
-        "
+        bg-gradient-to-br from-zinc-900 via-zinc-900 to-zinc-800 hover:bg-gradient-to-br hover:from-zinc-800 hover:via-zinc-700 hover:to-zinc-600
+        transition-transform duration-200 hover:scale-120"
+
         >
-            <div className="relative">
+            <div className="relative ">
                 <img
                     src={photo.src}
                     alt={photo.alt || photo.title}
-                    className="w-full object-cover break-inside-avoid"
+                    className="w-full object-cover break-inside-avoid hover:scale-150"
                     loading="lazy"
                 />
 

@@ -14,13 +14,13 @@ function App(): JSX.Element {
                         path="/"
                         element={
                             <>
-                                <div className={`relative w-full min-h-screen bg-cover bg-fixed bg-mist-900`}>
+                                <div className={`relative w-full min-h-screen bg-cover bg-fixed image-background`}>
                                     <div className="max-w-[2000px] mx-auto min-h-screen">
                                         <Hero />
                                     </div>
                                 </div>
 
-                                <div className="relative w-full bg-dark text-white min-h-[500px] z-30">
+                                <div className="relative w-full bg-dark text-white min-h-[500px] z-30 section_below_hero">
                                     <div className="relative z-10 p-8 py-48 max-w-[2000px] mx-auto">
                                         <Gallery title="Highlights" tag="highlight"/>
                                     </div>

@@ -26,12 +26,22 @@
 
 @theme {
     --color-dark:#000000;
+    --color-dark-secondary:#161b1d;
     --color-gray:#B6B6B6;
     --color-light:#FFFFFF;
     --color-accent:#82AC66;
 
     --font-sora: "Sora", sans-serif;
     --font-jetbrains-mono: "JetBrains Mono", monospace;
+}
+
+.image-background {
+    background-image:
+            linear-gradient(rgba(0, 0, 0, 0.5), #0F0F0F),
+            url('./assets/img/bg-gc-1.webp');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .sora-light, :root {
@@ -75,7 +85,7 @@ h1 {
     font-optical-sizing: auto;
     font-weight: 700;
     font-style: normal;
-    font-size: 3.5rem;
+    font-size: 4.5rem;
     color: var(--color-light);
 }
 

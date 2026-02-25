@@ -1,6 +1,11 @@
 import moon_long_exposure from "../assets/img/photography/moon_long_exposure.webp"
 import drone from "../assets/img/photography/drone.webp"
 import pertholz from "../assets/img/photography/pertholz.webp"
+import specht from "../assets/img/photography/male_side.webp"
+import kleiber from "../assets/img/photography/side_down.webp"
+import sperber from "../assets/img/photography/sperber.webp"
+
+
 
 export const navLinks = [
     {
@@ -109,7 +114,7 @@ export const photos = [
     },
     {
         id: 'drone',
-        src: drone,
+        src: kleiber,
 
         title: 'Drone',
         alt: 'Drone',
@@ -128,7 +133,7 @@ export const photos = [
     },
     {
         id: 'pertholz',
-        src: pertholz,
+        src: specht,
 
         title: 'pertholz',
         alt: 'pertholz',
@@ -147,7 +152,7 @@ export const photos = [
     },
     {
         id: 'moon-long-exposure-2',
-        src: moon_long_exposure,
+        src: sperber,
 
         title: 'Moon long exposure',
         alt: 'Moon long exposure',

@@ -3,6 +3,8 @@ import { photos } from '../constants';
 import { gsap } from "gsap";
 import {type JSX, useEffect} from "react";
 
+
+
 interface Photo {
     id: string | number;
     tags?: string[];
@@ -28,28 +30,27 @@ function Gallery({tag}: GalleryProps): JSX.Element {
     );
 
     useEffect(() => {
-        gsap.fromTo(".projectNOTYET",
-            { y: 100, opacity: 0.75, scale: 0.93 },
+        gsap.fromTo(".project",
+            { y: 10, opacity: 0.5, scale: 0.95 },
             {
                 y: 0,
                 opacity: 1,
                 scale: 1,
-                duration: 0.8,
+                duration: 2,
                 stagger: 0.2,
-                ease: "power3.out",
+                ease: "power3.inOut",
                 scrollTrigger: {
                     trigger: ".projectWrapper",
                     start: "top 90%",
-                    scrub: true,
                 }
             }
         );
     }, []);
 
     return (
-        <div className="sm:w-[90%] w-full m-auto">
+        <div className="sm:w-[80%] w-full m-auto projectWrapper">
             {/*<h2>{title}</h2>*/}
-            <div className="columns-1 sm:columns-2 sm:gap-16 gap-4 my-16 [column-fill:_balance] projectWrapper">
+            <div className="columns-1 sm:columns-2 sm:gap-16 gap-4 my-16 [column-fill:_balance] project">
                 {taggedPhotos.map((photo: Photo) => (
                     <GalleryItem
                         photo={photo}
