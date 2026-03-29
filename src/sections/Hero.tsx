@@ -1,21 +1,22 @@
 'use client';
-import { motion } from 'framer-motion';
-import { type JSX, useEffect, useState, useRef } from "react";
+// import { motion } from 'framer-motion';
+import { useState, useRef } from "react";
 import { gsap } from "gsap";
 
 import { SplitText } from "gsap/SplitText";
 import { TextPlugin } from "gsap/TextPlugin";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import Navigation from "./Navigation.tsx"
-import AnimatedButton from "../custom/AnimatedButton.tsx";
+import moonImg from "../assets/img/moon.webp";
+import CustomButton from "../components/CustomButton.tsx";
+import {useGSAP} from "@gsap/react";
 
 gsap.registerPlugin(SplitText, TextPlugin, ScrollTrigger);
 
-function Hero(): JSX.Element {
+function Hero(){
     const [, setActive] = useState<string>("");
     const splitRef = useRef<InstanceType<typeof SplitText> | null>(null);
 
-    useEffect(() => {
+    useGSAP(() => {
         document.fonts.ready.then((): void => {
             const split = new SplitText(".hero_text", {
                 type: "lines",
@@ -52,11 +53,11 @@ function Hero(): JSX.Element {
 
         gsap.fromTo(".testRef",
             {y: 0},
-            {y: 250,
+            {y: 300,
             ease:"none",
             scrollTrigger: {
                 trigger: ".testRef",
-                start: "top center",
+                start: "center center",
                 end: "bottom top",
                 scrub: true,
                 //markers: true,
@@ -70,11 +71,11 @@ function Hero(): JSX.Element {
 
     return (
         <>
-            <motion.div
+            {/*<motion.div
                 initial={{ y: "100%" }}
                 animate={{ y: "-100%" }}
                 transition={{
-                    duration: 1.2,
+                    duration: 1.1,
                     ease: [0.5, 0, 0.25, 1],
                 }}
                 className="absolute bottom-0 left-0 w-1/2 h-full bg-dark z-10"
@@ -84,9 +85,9 @@ function Hero(): JSX.Element {
                 initial={{ y: "-100%" }}
                 animate={{ y: "100%" }}
                 transition={{
-                    duration: 1.2,
+                    duration: 1.1,
                     ease: [0.5, 0, 0.25, 1],
-                    delay: 0.1,                  // tiny offset so they don’t feel robotic
+                    delay: 0.1,
                 }}
                 className="absolute top-0 right-0 w-1/2 h-full bg-dark z-10"
             />
@@ -100,25 +101,32 @@ function Hero(): JSX.Element {
                     ease: 'easeOut',
                 }}
                 className="relative z-10"
-            >
+            >*/}
                 <div>
-                    <Navigation alignment={"sm:justify-end"}/>
-                    <div className="flex flex-col lg:flex-row min-h-screen w-full gap-16 lg:gap-0 items-center">
-                        <div className="flex-1 flex flex-col px-6 sm:px-16 w-full text-left">
-                            <p className="hero_text text-light mono w-full hidden">MARIUS LASSL</p>
-                            <h1 className="hero_text text-4xl sm:text-9xl w-full py-4">PHOTO<br/>GRAPHY</h1>
+                    <div className="flex flex-col lg:flex-row min-h-screen w-full gap-6 lg:gap-0 items-center">
+                        <div className="flex-1 flex flex-col w-full text-left z-20">
+                            <h1 className="hero_text text-4xl sm:text-9xl w-full py-4">Nature Didn't Pose. <br/> I Made It Work.</h1>
                         </div>
-                        <div className="testRef p-64 bg-dark rounded-full">
+
+                        <div className="testRef pointer-events-none absolute inset-0 flex items-center justify-center z-10">
+                            {/*<div className="p-48 bg-dark-secondary rounded-full" />*/}
+                            <img src={moonImg} className="w-1/3" alt="closeup moon marius lassl"/>
                         </div>
-                        <div className="flex-1 flex px-6 sm:px-16 w-full text-justify justify-end">
-                            <p className="hero_info w-full sm:w-1/2">
-                                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labor
-                            </p>
+
+                        <div className="flex-1 flex w-full text-justify justify-end z-20 text-gray">
+                            <div  className="hero_info w-full sm:w-1/2 text-right pl-12">
+                                <p className="text-light text-[1.05rem] font-medium">
+                                    <span className="font-extrabold">Consetetur</span> pscing elitr
+                                </p>
+                                <p className="leading-5">
+                                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labor
+                                </p>
+                            </div>
                         </div>
                     </div>
-                    <div className="flex justify-center w-full absolute z-20 bottom-0 py-8">
-                        <AnimatedButton
-                            primary rounded
+
+                    <div className="flex justify-center grid-max-width w-full mx-auto absolute z-20 bottom-0 py-8">
+                        <CustomButton
                             className="hero_button"
                             onClick={(): void => {
                                 const kontaktSection = document.getElementById("contact");
@@ -128,11 +136,11 @@ function Hero(): JSX.Element {
                                 setActive("kontakt");
                             }}
                         >
-                            Jetzt Kontakt aufnehmen
-                        </AnimatedButton>
+                            Contact me.
+                        </CustomButton>
                     </div>
                 </div>
-            </motion.div>
+            {/*</motion.div>*/}
         </>
     );
 }

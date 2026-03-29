@@ -1,17 +1,16 @@
 import { Phone, Mail, Globe} from "lucide-react";
-import {type JSX} from "react";
 
-function Footer(): JSX.Element {
+function Footer(){
     return (
-        <div className={`bg-dark`}>
-            <div className={`max-w-[2000px] padding-x mx-auto pb-6 pt-16 w-full text-light flex flex-col sm:flex-row justify-between gap-6`}>
+        <>
+            <div className={`mx-auto pb-6 pt-16 w-full text-light flex flex-col sm:flex-row justify-between items-end gap-6 min-h-[32vw] bg-mist-700 outter-padding`}>
                 <div className="flex flex-col gap-1">
                     <div className="flex flex-row gap-3">
                         <Phone className="lg:w-5 text-light" />
                         <a href="tel:+436645859370">+43 664 5859370</a>
                     </div>
                     <div className="flex flex-row gap-3">
-                        <Mail className="lg:w-5 text-ligt" />
+                        <Mail className="lg:w-5 text-light" />
                         <a href="mailto:office@marius-lassl.com"> office@marius-lassl.com </a>
                     </div>
                     <div className="flex flex-row gap-3">
@@ -24,7 +23,8 @@ function Footer(): JSX.Element {
                     <p>Photography Portfolio | Marius Lassl</p>
                 </div>
             </div>
-        </div>
+        </>
+
     );
 }
 

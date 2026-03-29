@@ -1,51 +1,29 @@
-import moon_long_exposure from "../assets/img/photography/moon_long_exposure.webp"
-import drone from "../assets/img/photography/drone.webp"
-import pertholz from "../assets/img/photography/pertholz.webp"
-import specht from "../assets/img/photography/male_side.webp"
-import kleiber from "../assets/img/photography/side_down.webp"
-import sperber from "../assets/img/photography/sperber.webp"
+import type {Camera, Lens, NavLink} from "../types";
 
-
-
-export const navLinks = [
+export const navLinks: NavLink[] = [
     {
         id: '0',
-        title: 'STÄRKEN',
-        slug: 'skills'
+        title: 'WILDLIFE',
+        slug: 'collection-wildlife-photography'
     },
     {
         id: '1',
-        title: 'PROJEKTE',
-        slug: 'projects'
+        title: 'NIGHT',
+        slug: 'collection-night-photography'
     },
     {
         id: '2',
-        title: 'KONTAKT',
-        slug: 'contact',
-    }
-]
-export const skills = [
-    {
-        id: '0',
-        number: '01',
-        title: 'Grafikdesign',
-        description: 'Ich entwerfe Logos, Grafiken und Layouts für Printprodukte wie Poster oder Verpackungen und sorge für ein stimmiges und professionelles Erscheinungsbild.'
+        title: 'MACRO',
+        slug: 'collection-macro-photography',
     },
     {
-        id: '1',
-        number: '02',
-        title: 'Web und Frontend',
-        description: 'Ich entwickle individuelle Websites und App-Oberflächen, verfeinere sie mit Animationen und optimiere sie für Suchmaschinen, damit Design und Sichtbarkeit Hand in Hand gehen.'
-    },
-    {
-        id: '2',
-        number: '03',
-        title: 'Fotografie',
-        description: 'Ich erstelle und bearbeite Fotos, um Projekten einen persönlichen, einzigartigen Touch zu verleihen.'
+        id: '3',
+        title: 'ABOUT ME',
+        slug: 'about-me',
     }
 ]
 
-export const cameras = [
+export const cameras: Camera[] = [
     {
         id: 'sony-a6400',
         brand: 'Sony',
@@ -72,7 +50,7 @@ export const cameras = [
 ];
 
 
-export const lenses = [
+export const lenses : Lens[] = [
     {
         id: 'sony-e-70-350-g-oss',
         brand: 'Sony',
@@ -89,84 +67,4 @@ export const lenses = [
         weight_g: 625,
         notes: 'Telephoto zoom G lens for APS-C with optical image stabilization.'
     }
-];
-
-
-export const photos = [
-    {
-        id: 'moon-long-exposure',
-        src: moon_long_exposure,
-
-        title: 'Moon long exposure',
-        alt: 'Moon long exposure',
-        datetime: "23.12.2025 | 13:02",
-
-        cameraId: 'sony-a6400',
-        lensId: 'sony-e-70-350-g-oss',
-
-        iso: 100,
-        shutter: '1/4',
-        fstop: 8,
-
-        focal_length_mm: 350,
-        location: 'Bad Großpertholz, Österreich',
-        tags: ['highlight', 'night', 'long exposure']
-    },
-    {
-        id: 'drone',
-        src: kleiber,
-
-        title: 'Drone',
-        alt: 'Drone',
-        datetime: "23.12.2025 | 13:02",
-
-        cameraId: 'sony-a6400',
-        lensId: 'sony-e-70-350-g-oss',
-
-        iso: 100,
-        shutter: '1/4',
-        fstop: 8,
-
-        focal_length_mm: 350,
-        location: 'Bad Großpertholz, Österreich',
-        tags: ['highlight']
-    },
-    {
-        id: 'pertholz',
-        src: specht,
-
-        title: 'pertholz',
-        alt: 'pertholz',
-        datetime: "23.12.2025 | 13:02",
-
-        cameraId: 'sony-a6400',
-        lensId: 'sony-e-70-350-g-oss',
-
-        iso: 100,
-        shutter: '1/4',
-        fstop: 8,
-
-        focal_length_mm: 350,
-        location: 'Bad Großpertholz, Österreich',
-        tags: ['highlight', 'night']
-    },
-    {
-        id: 'moon-long-exposure-2',
-        src: sperber,
-
-        title: 'Moon long exposure',
-        alt: 'Moon long exposure',
-        datetime: "23.12.2025 | 13:02",
-
-        cameraId: 'sony-a6400',
-        lensId: 'sony-e-70-350-g-oss',
-
-        iso: 100,
-        shutter: '1/4',
-        fstop: 8,
-
-        focal_length_mm: 350,
-        location: 'Bad Großpertholz, Österreich',
-        tags: ['highlight', 'night', 'long exposure']
-    },
 ];

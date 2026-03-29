@@ -1,4 +1,4 @@
-import { CopyButton } from '../custom/CopyButton.tsx';
+import { CopyButton } from '../components/CopyButton.tsx';
 import {type JSX, useEffect} from "react";
 import { SplitText } from "gsap/SplitText";
 import { gsap } from "gsap";

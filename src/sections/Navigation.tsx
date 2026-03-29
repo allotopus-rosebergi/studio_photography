@@ -1,49 +1,43 @@
 import { HashLink } from 'react-router-hash-link';
-import { RollingText } from '../custom/RollingText.tsx';
-import {type JSX, useState} from "react";
-import { navLinks } from "../../constants";
+import { RollingText } from '../components/RollingText.tsx';
+import {useState} from "react";
+import { navLinks } from "../constants";
 import { TextAlignEnd, X } from "lucide-react";
 
-interface NavLink {
-    id: string | number;
-    slug: string;
-    title: string;
-}
+import type {NavLink} from '../types';
 
-interface NavigationProps {
-    color?: string;
-    alignment?: string;
-}
-
-function Navigation({ color = 'text-light', alignment = 'sm:justify-center' }: NavigationProps): JSX.Element {
+function Navigation() {
     const [active, setActive] = useState<string>("");
     const [drawerOpen, setDrawerOpen] = useState<boolean>(false);
 
     return (
         <>
             <nav
-                className={`padding-x py-8 w-full top-0 z-20 transition-transform duration-300 relative lg:absolute flex flex-row justify-end ${alignment}`}
+                className={`py-8 grid-max-width w-full mx-auto top-0 transition-transform duration-300 absolute z-40`}
             >
-                <ul className="list-none hidden sm:flex flex-row items-center gap-10">
-                    {(navLinks as NavLink[]).map((link: NavLink) => (
-                        <li
-                            key={link.id}
-                            className={`${color} cursor-pointer font-bold`}
-                            onClick={() => setActive(link.slug)}
-                        >
-                            <HashLink smooth to={`/#${link.slug}`}><RollingText text={link.title}></RollingText></HashLink>
-                        </li>
-                    ))}
-                </ul>
-
+                <div className="flex flex-row justify-between w-full">
+                    <a className="besley-bold text-lg text-light pt-1" href="https://www.marius-lassl.com" target="_blank" > Marius Lassl. </a>
+                    <ul className="list-none hidden sm:flex flex-row items-center gap-2 text-gray">
+                        {(navLinks as NavLink[]).map((link: NavLink) => (
+                            <li
+                                key={link.id}
+                                className={`cursor-pointer font-bold`}
+                                onClick={() => setActive(link.slug)}
+                            >
+                                <HashLink smooth to={`/#${link.slug}`}><RollingText text={link.title}></RollingText></HashLink>
+                            </li>
+                        ))}
+                    </ul>
+                </div>
                 <button
-                    className="sm:hidden "
+                    className="sm:hidden"
                     onClick={() => setDrawerOpen(true)}
                     aria-label="Menü öffnen"
                 >
                     <TextAlignEnd size={34}/>
                 </button>
             </nav>
+
 
             {drawerOpen && (
                 <div
