@@ -1,4 +1,4 @@
-import type {Collection, Photo} from "../types";
+import type {Collection, Photo} from "@/types";
 import moon_long_exposure from "../assets/img/photography/moon_long_exposure.webp";
 import kleiber from "../assets/img/photography/side_down.webp";
 import specht from "../assets/img/photography/male_side.webp";
@@ -120,16 +120,40 @@ export const collections: Collection[] = [
     {
         id: "wildlife_collections",
         name: "Wildlife Photography",
+        slug: "wildlife-photography",
+        thumbnail: specht,
         description:
-            "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+            "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.",
         photoIds: ["kleiber-nuthatch", "sperber-sparrowhawk"],
-    },
 
+    },
     {
         id: "night_collection",
         name: "Night Photography",
+        slug: "night-photography",
+        thumbnail: moon_long_exposure,
         description:
-            "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusat et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
-        photoIds: ["moon-long-exposure"],
+            "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.",
+        photoIds: [],
+    },
+
+    {
+        id: "macro_collection",
+        name: "Macro Photography",
+        slug: "macro-photography",
+        thumbnail: cilnia_humeralise,
+        description:
+            "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.",
+        photoIds: [],
+    },
+
+    {
+        id: "travel_collection",
+        name: "Travel Photography",
+        slug: "travel-photography",
+        thumbnail: atomium,
+        description:
+            "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.",
+        photoIds: [],
     },
 ];

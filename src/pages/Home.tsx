@@ -1,6 +1,7 @@
 import {Contact, Footer, Hero} from "../sections";
 import Gallery from "../components/Gallery.tsx";
 import Navigation from "../sections/Navigation.tsx";
+import CollectionCarousel from "@/sections/CollectionCarousel.tsx";
 
 
 function Home() {
@@ -21,6 +22,12 @@ function Home() {
                         </div>
                     </div>
 
+                    <div className="relative w-full z-30">
+                        <div className="relative z-10 pb-48 grid-max-width mx-auto">
+                            <CollectionCarousel/>
+                        </div>
+                    </div>
+
                     <div className="relative w-full">
                         <div className="relative z-10 pb-48 grid-max-width mx-auto">
                             <Contact />
@@ -30,7 +37,7 @@ function Home() {
             </div>
 
             <div className="relative w-full">
-                <div className="relative z-10 grid-max-width mx-auto">
+                <div className="relative z-10 mx-auto">
                     <Footer />
                 </div>
             </div>

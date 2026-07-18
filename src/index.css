@@ -27,7 +27,7 @@
         @apply sm:mx-16 sm:my-16 mx-0 my-0;
     }
     .grid-max-width {
-        @apply max-w-[1800px];
+        @apply max-w-[1800px] mx-auto;
     }
     .grid-medium-width {
         @apply max-w-[1140px];

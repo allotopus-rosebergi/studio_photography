@@ -100,6 +100,8 @@ export type Lens = {
 export type Collection = {
     id: string;
     name: string;
+    slug: string;
+    thumbnail: string;
     description: string;
     photoIds: string[];
 }
