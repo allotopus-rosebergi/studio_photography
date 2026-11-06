@@ -13,47 +13,6 @@ function Gallery({ tag }: GalleryProps) {
     const taggedPhotos = (photos as Photo[]).filter((img: Photo) =>
         img.tags?.includes(tag)
     );
-
-    /*useGSAP(
-        () => {
-            const wrapper = wrapperRef.current;
-            if (!wrapper) return;
-
-            const items = gsap.utils.toArray<HTMLElement>(".gallery-item", wrapper);
-
-            ScrollTrigger.refresh();
-
-            const sorted = [...items].sort((a, b) => {
-                const aTop = a.getBoundingClientRect().top;
-                const bTop = b.getBoundingClientRect().top;
-                if (Math.abs(aTop - bTop) < 10) {
-                    return a.getBoundingClientRect().left - b.getBoundingClientRect().left;
-                }
-                return aTop - bTop;
-            });
-
-            sorted.forEach((item) => {
-                gsap.fromTo(
-                    item,
-                    { opacity: 0, scale: 0.88, y: 24 },
-                    {
-                        opacity: 1,
-                        scale: 1,
-                        y: 0,
-                        ease: "power2.out",
-                        scrollTrigger: {
-                            trigger: item,
-                            start: "top 80%",
-                            end: "bottom bottom",
-                            scrub: 0.6,
-                        },
-                    }
-                );
-            });
-        },
-        { scope: wrapperRef, dependencies: [tag] }
-    );*/
-
     useGSAP(() => {
         const items = gsap.utils.toArray<HTMLElement>(".gallery-item");
 
