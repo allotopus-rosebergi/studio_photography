@@ -13,21 +13,18 @@ export type Photo = {
     tags?: string[];
     title: string;
     datetime: string;
-    iso: string | number;
-    fstop: string | number;
-    focal_length_mm: string | number;
-    shutter: string;
+    iso?: string | number;
+    fstop?: string | number;
+    focal_length_mm?: string | number;
+    shutter?: string;
     location: string;
+    width?: number;
+    height?: number;
 }
 
 export type GalleryItemProps = {
     photo: Photo;
     className?: string;
-}
-
-export type GalleryProps = {
-    title: string;
-    tag: string;
 }
 
 type SensorSize = {
@@ -101,7 +98,7 @@ export type Collection = {
     id: string;
     name: string;
     slug: string;
-    thumbnail: string;
-    description: string;
+    thumbnail?: string;
+    description?: string;
     photoIds: string[];
 }

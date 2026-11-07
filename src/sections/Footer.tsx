@@ -1,68 +1,31 @@
-import { Phone, Mail, Globe} from "lucide-react";
-import Grainient from '../components/Grainient';
-
-
+import {Frame} from '@/components'
+import FooterImg from '@/assets/img/footer.webp'
 
 function Footer(){
     return (
-        <>
-            <div className="mx-auto w-full h-[18vw] text-light flex flex-col relative">
+        <div className="relative">
+            <div className="min-h-20 sm:min-h-[85vh] flex flex-col mb-12 sm:m-0 justify-between items-center">
+                <h2 className="text-7xl leading-16 sm:text-9xl text-center sm:leading-28">Let`s create something worth remembering.</h2>
 
-                {/* Background layer — stretched to fill entire footer */}
-                <div className="absolute inset-0">
-                    <Grainient
-                        color1="#221816"
-                        color2="#ff6a00"
-                        color3="#fff995"
-                        timeSpeed={0.9}
-                        colorBalance={0.02}
-                        warpStrength={1}
-                        warpFrequency={5}
-                        warpSpeed={2}
-                        warpAmplitude={50}
-                        blendAngle={0}
-                        blendSoftness={0.05}
-                        rotationAmount={500}
-                        noiseScale={2}
-                        grainAmount={0.1}
-                        grainScale={1.9}
-                        grainAnimated={false}
-                        contrast={1.5}
-                        gamma={1}
-                        saturation={0.45}
-                        centerX={0}
-                        centerY={0}
-                        zoom={0.9}
-                    />
-                    <div className="h-8 w-full bg-dark-gradient-light rounded-b-[80px] z-40 absolute -top-1"></div>
-                </div>
-
-                {/* Content layer — sits on top */}
-                <div className="grid-max-width mx-auto w-full flex-1 flex items-end relative z-10">
-                    <div className="flex flex-col sm:flex-row justify-between items-end gap-6 w-full pb-6 outter-padding">
-                        <div className="flex flex-col gap-1">
-                            <div className="flex flex-row gap-3">
-                                <Phone className="lg:w-5 text-light" />
-                                <a href="tel:+436645859370">+43 664 5859370</a>
-                            </div>
-                            <div className="flex flex-row gap-3">
-                                <Mail className="lg:w-5 text-light" />
-                                <a href="mailto:office@marius-lassl.com">office@marius-lassl.com</a>
-                            </div>
-                            <div className="flex flex-row gap-3">
-                                <Globe className="lg:w-5 text-light pb-1" />
-                                <a href="https://marius-lassl.com" target="_blank" className="hover:underline underline-offset-2">www.marius-lassl.com</a>
-                            </div>
-                        </div>
-                        <div className="text-left sm:text-right flex flex-col gap-1">
-                            <p>@2026 All rights reserved.</p>
-                            <p>Photography Portfolio | Marius Lassl</p>
-                        </div>
+                <Frame className="w-full mb-4 mt-12">
+                    <div className="w-full flex flex-row justify-between gap-1 sm:gap-2 sm:flex-row">
+                        <a href="mailto:hello@marius-lassl.com" className="z-40">
+                            <span className="staatliches-regular mr-2 text-lg">Mail</span>
+                            <span className="hover:underline">hello@marius-lassl.com</span>
+                        </a>
+                        <a href="tel:+436645859370" className="z-40">
+                            <span className="staatliches-regular mr-2 text-lg">Telephone</span>
+                            <span className="hover:underline">+43 664 5859370</span>
+                        </a>
                     </div>
-                </div>
+                </Frame>
 
+                <p className=" text-xs sm:text-white z-40"> © {new Date().getFullYear()} All rights reserved</p>
             </div>
-        </>
+            <div className="w-full -mb-12 sm:m-0 static sm:absolute -bottom-12 z-30">
+                <img src={FooterImg} className="w-[55vw] m-auto"/>
+            </div>
+        </div>
     );
 }
 

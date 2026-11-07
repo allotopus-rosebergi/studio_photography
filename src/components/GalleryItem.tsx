@@ -72,7 +72,7 @@ function GalleryItem({ photo, className }: GalleryItemProps) {
     return (
         <div
             ref={cardRef}
-            className={`${className ?? ""} mb-6 w-full relative`}
+            className={`${className ?? ""} mb-6 w-full relative text-white`}
             style={{ willChange: "transform" }}
         >
             <img
@@ -85,18 +85,18 @@ function GalleryItem({ photo, className }: GalleryItemProps) {
             <div className="gallery-item-vignette absolute opacity-0 hover:opacity-100 inset-0 p-4 sm:p-6 flex flex-col justify-between text-sm">
                 <div className="flex flex-col w-full justify-between gap-4">
                     <div>
-                        <p className="besley-bold text-xl">{photo.title}</p>
+                        <p className="text-xl">{photo.title}</p>
                     </div>
                     <div className="text-left">
-                        <p><span className="font-extrabold">LENS</span> <span className="text-gray">{lens!.brand + " " + lens!.model}</span></p>
-                        <p><span className="font-extrabold">BODY</span> <span className="text-gray">{camera!.brand + " " + camera!.model}</span></p>
+                        <p><span className="font-extrabold">LOCATION</span> <span className="text-gray">{photo.location}</span></p>
+                        <p><span className="font-extrabold">DATE</span> <span className="text-gray">{photo.datetime}</span></p>
                     </div>
                 </div>
 
-                <div className="w-full border-1 h-full my-2 border-white hidden"></div>
 
                 <div className="flex flex-row w-full justify-between gap-4 items-end">
-                    <div className="text-left text-gray">
+                    {/*HIDDEN TEMPORARILY!! I hid the "visit collection" button until i include an actual collection seciton*/}
+                    <div className="hidden text-left text-gray">
                         {photoCollections.length > 0
                             ? photoCollections.map(c =>
                                 <div key={c.id}>
@@ -106,10 +106,13 @@ function GalleryItem({ photo, className }: GalleryItemProps) {
                             : <p>This photo is not part of any other collection.</p>
                         }
                     </div>
+                    <div></div>
                     <div className="text-right">
-                        <p><span className="font-extrabold">ISO</span> <span className="text-gray">{photo.iso}</span></p>
-                        <p><span className="font-extrabold">F-STOP</span> <span className="text-gray">{photo.fstop}</span></p>
-                        <p><span className="font-extrabold">SHUTTER</span> <span className="text-gray">{photo.shutter}</span></p>
+                        {/*<p><span className="font-extrabold">ISO</span> <span className="text-gray">{photo.iso}</span></p>*/}
+                        {/*<p><span className="font-extrabold">F-STOP</span> <span className="text-gray">{photo.fstop}</span></p>*/}
+                        {/*<p><span className="font-extrabold">SHUTTER</span> <span className="text-gray">{photo.shutter}</span></p>*/}
+                        <p><span className="font-extrabold">LENS</span> <span className="text-gray">{lens!.brand + " " + lens!.model}</span></p>
+                        <p><span className="font-extrabold">BODY</span> <span className="text-gray">{camera!.brand + " " + camera!.model}</span></p>
                     </div>
                 </div>
             </div>
