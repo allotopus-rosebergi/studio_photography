@@ -8,8 +8,8 @@ const featuredWork = collections.find((c) => c.id === "featured_work");
 
 function Home() {
     return (
-            <div className="rounded-default bg-white p-6 text-dark">
-                <div className="p-6 grid-max-width flex flex-col gap-32">
+            <div className="rounded-default bg-white p-2 md:p-6 text-dark">
+                <div className="p-2 md:p-6 grid-max-width flex flex-col gap-12 md:gap-32">
                     <AsciiReveal preset="blueprint">
                         <Hero/>
                     </AsciiReveal>

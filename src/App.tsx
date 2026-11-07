@@ -25,7 +25,7 @@ function App() {
                 <ScrollToHashElement />
 
                 <div id="smooth-wrapper">
-                    <div id="smooth-content" className="flex-1 min-h-dvh bg-dark p-2 sm:py-8 sm:px-8 relative">
+                    <div id="smooth-content" className="flex-1 min-h-dvh bg-dark p-2 md:py-8 md:px-8 relative">
                         <Routes>
                             <Route
                                 path="/"

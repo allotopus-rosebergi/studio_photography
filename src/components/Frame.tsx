@@ -14,19 +14,19 @@ function Frame({title, description, children, className}:FrameProps) {
     return (
         <section className={cn(className, "relative")}>
 
-            <span aria-hidden className={cn(line, "top-0 -left-border-ext -right-border-ext h-px")} />
-            <span aria-hidden className={cn(line, "bottom-0 -left-border-ext -right-border-ext h-px")} />
-            <span aria-hidden className={cn(line, "left-0 -top-border-ext -bottom-border-ext w-px")} />
-            <span aria-hidden className={cn(line, "right-0 -top-border-ext -bottom-border-ext w-px")} />
+            <span aria-hidden className={cn(line, "top-0 md:-left-border-ext md:-right-border-ext -left-border-ext-mobile -right-border-ext-mobile h-px")} />
+            <span aria-hidden className={cn(line, "bottom-0 md:-left-border-ext md:-right-border-ext -left-border-ext-mobile -right-border-ext-mobile h-px")} />
+            <span aria-hidden className={cn(line, "left-0 md:-top-border-ext md:-bottom-border-ext -top-border-ext-mobile -bottom-border-ext-mobile w-px")} />
+            <span aria-hidden className={cn(line, "right-0 md:-top-border-ext md:-bottom-border-ext -top-border-ext-mobile -bottom-border-ext-mobile w-px")} />
 
             {(title || description) && (
-                <div className="flex flex-col sm:flex-row items-startsm:items-center w-full justify-between gap-2 sm:gap-12 px-6 py-4 bg-white/80 backdrop-blur-md sticky top-0 z-20 border-b-1 border-default-border">
+                <div className="flex flex-col md:flex-row items-start md:items-center w-full justify-between gap-2 md:gap-12 p-4 md:px-6 md:py-4 bg-white/80 backdrop-blur-md sticky top-0 z-20 border-b-1 border-default-border">
                     <h2 className="inline-full"> {title} </h2>
-                    <p className="flex-left sm:text-right leading-[1.2rem] text-sm">{description}</p>
+                    <p className="flex-left md:text-right leading-[1.2rem] text-sm">{description}</p>
                 </div>
             )}
 
-            <div className="p-6">
+            <div className="p-4 md:p-6">
                 {children}
             </div>
         </section>

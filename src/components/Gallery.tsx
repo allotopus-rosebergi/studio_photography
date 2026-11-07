@@ -72,7 +72,7 @@ function Gallery({ collection }: GalleryProps) {
         <div className="m-auto">
             <div
                 ref={wrapperRef}
-                className="gallery-wrapper columns-1 sm:columns-2 sm:gap-6 gap-4 [column-fill:_balance]"
+                className="gallery-wrapper columns-1 md:columns-2 md:gap-6 gap-4 [column-fill:_balance]"
             >
                 {collectionPhotos.map((photo) => (
                     <GalleryItem photo={photo} key={photo.id} className="gallery-item" />
