@@ -160,7 +160,7 @@ export const photos: Photo[] = [
     {
         id: "london-seagull",
         src: london_seagull,
-        title: "Seagull prunding",
+        title: "Seagull pruning",
         alt: "Seagull in London",
         datetime: "2026",
         cameraId: "sony-a6400",

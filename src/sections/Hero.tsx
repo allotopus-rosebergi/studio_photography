@@ -1,7 +1,7 @@
 function Hero() {
     return(
         <section className="w-full p-6 pt-18 md:pt-24">
-            <h1 className=" text-4xl md:text-5xl">
+            <h1 className="text-4xl md:text-5xl">
                 Hi, I'm Marius Lassl
             </h1>
 

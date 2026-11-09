@@ -2,6 +2,8 @@ export type NavLink = {
     id: string | number;
     slug: string;
     title: string;
+    color: string;
+    disabled?: boolean;
 }
 
 export type Photo = {

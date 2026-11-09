@@ -1,25 +1,17 @@
-import type {Camera, Lens, NavLink} from "../types";
+import type {Camera, Lens, NavLink} from "@/types";
 
 export const navLinks: NavLink[] = [
     {
         id: '0',
-        title: 'WILDLIFE',
-        slug: 'collection-wildlife-photography'
-    },
-    {
-        id: '1',
-        title: 'NIGHT',
-        slug: 'collection-night-photography'
+        title: 'Home',
+        slug: '/',
+        color: "before:bg-[#ffffff]",
     },
     {
         id: '2',
-        title: 'MACRO',
-        slug: 'collection-macro-photography',
-    },
-    {
-        id: '3',
-        title: 'ABOUT ME',
-        slug: 'about-me',
+        title: 'Calendar 2027',
+        slug: 'calendar-2027',
+        color: 'before:bg-[#D1B98A]',
     }
 ]
 
