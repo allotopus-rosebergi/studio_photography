@@ -4,7 +4,7 @@ import FooterImg from '@/assets/img/footer.webp'
 function Footer(){
     return (
         <div className="relative">
-            <div className="min-h-20 md:min-h-[85vh] flex flex-col mb-12 md:m-0 justify-between items-center">
+            <div className="md:min-h-[85vh] flex flex-col mb-12 md:m-0 justify-between items-center">
                 <h2 className="text-5xl leading-10 md:text-9xl text-center md:leading-28 py-4 md:p-0">Let`s create something worth remembering.</h2>
 
                 <Frame className="w-full mb-4 mt-12">
@@ -20,10 +20,10 @@ function Footer(){
                     </div>
                 </Frame>
 
-                <p className=" text-xs md:text-white z-40"> © {new Date().getFullYear()} All rights reserved</p>
+                <p className=" text-xs md:text-white z-40 mb-12 md:m-0"> © {new Date().getFullYear()} All rights reserved</p>
             </div>
             <div className="w-full -mb-4 md:m-0 static md:absolute -bottom-12 z-30">
-                <img src={FooterImg} className="w-[85vw] md:w-[55vw] m-auto"/>
+                <img src={FooterImg} className="w-full md:w-[55vw] m-auto"/>
             </div>
         </div>
     );
